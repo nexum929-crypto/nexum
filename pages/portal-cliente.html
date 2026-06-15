@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal del cliente | NEXUM</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="../index.html">NEXUM<span>.</span></a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Sitio público</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="clientLogin" class="login-wrapper">
+      <form id="clientLoginForm" class="login-card">
+        <p class="eyebrow">Portal del cliente</p>
+        <h1>Seguimiento de proyecto</h1>
+        <p class="notice">Demo: cliente@nexum.mx / Cliente2026!</p>
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input id="usuario" name="usuario" type="email" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" required>
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Entrar</button>
+        <div id="clientLoginMessage" class="form-message"></div>
+      </form>
+    </section>
+
+    <section id="clientArea" class="dashboard hidden">
+      <div class="container">
+        <div class="dashboard-header">
+          <div>
+            <p class="eyebrow">Cliente registrado</p>
+            <h1>Estado del proyecto</h1>
+          </div>
+          <button id="clientLogout" class="btn btn-secondary">Cerrar sesión</button>
+        </div>
+
+        <div class="form-layout">
+          <div>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Fase</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="projectStatusTable"></tbody>
+              </table>
+            </div>
+
+            <br>
+            <div class="form-card">
+              <h2>Subir documentos</h2>
+              <p>Simulación visual de carga de archivos para diagnóstico.</p>
+              <br>
+              <input id="clientFile" type="file">
+              <div id="fileMessage" class="form-message"></div>
+            </div>
+          </div>
+
+          <form id="supportForm" class="form-card">
+            <h2>Solicitar soporte</h2>
+            <div class="form-group">
+              <label for="asunto">Asunto *</label>
+              <input id="asunto" name="asunto" type="text" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <br>
+            <button class="btn btn-primary" type="submit">Enviar soporte</button>
+            <div id="supportMessage" class="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/forms.js"></script>
+  <script src="../js/cliente.js"></script>
+</body>
+</html>
